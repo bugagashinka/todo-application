@@ -11,8 +11,8 @@ const checkStringLength = (str) => {
 };
 
 export default class Task {
-  constructor({ title, description, priority, status }, handlers) {
-    this.proto = new TaskModel(title, description, priority, status);
+  constructor({ title, description, priority, status, date }, handlers) {
+    this.proto = new TaskModel(title, description, priority, status, date);
 
     const taskElement = document.createElement('div');
     taskElement.innerHTML = `${this}`.trim();

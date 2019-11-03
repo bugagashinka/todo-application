@@ -21,7 +21,6 @@ export default class TaskMenu {
   menuItemSelected({ target }) {
     switch (target.textContent) {
       case DONE_MENU_ITEM:
-        //this.element.querySelector('.task-menu__button').disabled = true;
         this.onDone(this.parentElement);
         break;
       case EDIT_MENU_ITEM:

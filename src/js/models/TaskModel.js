@@ -6,14 +6,14 @@ export default class Task {
     description = '',
     priority = NORMAL_PRIORITY,
     status = OPEN_STATUS,
-    date = new Date().getTime(),
+    date,
   ) {
     Object.assign(this, {
       title,
       description,
       priority,
       status,
-      date,
+      date: Number(date) || new Date().getTime(),
     });
   }
 
