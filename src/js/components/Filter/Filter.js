@@ -41,7 +41,7 @@ const Filter = {
       priority: priorityInput.value.toLowerCase(),
       status: statusInput.value.toLowerCase(),
     };
-    this.onChange(this.filter(this.todoMap, filterConditions));
+    this.onChange(this.filter(this.todoMap, filterConditions).reverse());
   },
 
   filter(todo, { title, priority, status }) {

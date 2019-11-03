@@ -19,13 +19,13 @@ const createTaskList = (taskProtoList) => {
   if (!taskProtoList || !taskProtoList.length) return;
 
   const elementList = taskProtoList
-    .sort((task1, task2) => task2.date - task1.date)
     .map((taskData) => {
       const newTask = new Task(taskData, taskMenuHandlers);
       todoMap.set(newTask.element, newTask.proto);
       return newTask.element;
-    });
-
+    })
+    .reverse();
+  // .sort((task1, task2) => task1.date - task2.date);
   TaskList.addAllTask(elementList);
 };
 
