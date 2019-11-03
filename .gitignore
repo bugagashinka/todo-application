@@ -1,0 +1,26 @@
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+# Distribution directory
+/dist
+
+# Optional eslint cache
+.eslintcache
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+
+# System Files
+.DS_Store
+Thumbs.db
