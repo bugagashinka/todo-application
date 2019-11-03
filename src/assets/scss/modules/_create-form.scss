@@ -1,0 +1,73 @@
+/* === Create task, modal window === */
+.create-task {
+  position: fixed;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: visibility 0s, opacity 0.3s linear;
+}
+
+.create-task_visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.task-content {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  width: 230px;
+  padding: 16px;
+  margin: 0 auto;
+  border: solid;
+  border-width: 2px 1px;
+  background-color: #fff;
+}
+
+.task-content__input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 5px;
+  border: 2px solid #555;
+}
+
+.task-content__title {
+  outline: none;
+}
+
+.task-content__description {
+  resize: none;
+  height: 80px;
+}
+
+.task-content__buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3.5em;
+
+  .button {
+    width: 100%;
+  }
+}
+
+.cancel-button {
+  margin-right: 10px;
+
+  &:hover {
+    background-color: #f4433699;
+  }
+}
+
+.save-button {
+  &:hover {
+    background-color: #4caf5099;
+  }
+}

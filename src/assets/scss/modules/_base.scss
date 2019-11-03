@@ -1,0 +1,67 @@
+$font-stack: Helvetica, sans-serif;
+
+/* === General styles === */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-stack;
+  background-color: #f6f6f6;
+}
+
+.general-input {
+  padding: 6px;
+  border: 2px solid #666;
+  outline: none;
+
+  &:focus {
+    border: 2px solid;
+  }
+}
+
+.header,
+.footer {
+  width: 100%;
+  padding: 30px 25px;
+  font-size: 28px;
+  background-color: #555a;
+  color: #fff;
+
+  @media screen and (max-width: $break-small) {
+    font-size: 24px;
+    padding: 15px;
+  }
+}
+
+.header {
+  @media screen and (max-width: $break-small) {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+}
+
+.wrapper {
+  max-width: 900px;
+  margin: 50px auto 150px;
+}
+
+.button {
+  border-radius: 10px;
+  padding: 5px 16px;
+  background-color: #fff;
+
+  &:hover {
+    background: #d6d6d7;
+  }
+
+  &:active {
+    background: #d6d6d7;
+  }
+}

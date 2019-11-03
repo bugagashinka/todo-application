@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      TODOList
+      <div id="filter-menu-button" class="filter-menu">
+        <div class="menu-bar1"></div>
+        <div class="menu-bar2"></div>
+        <div class="menu-bar3"></div>
+      </div>
+    </header>
+
+    <section class="wrapper">
+      <form id="filter-form" class="filter-form">
+        <input
+          type="text"
+          id="title-filter"
+          class="general-input title-filter"
+          size="32"
+          placeholder="Search by title"
+        />
+
+        <select id="status-filter" class="general-input status-filter" name="status">
+          <option value="All">All</option>
+          <option value="Open">Open</option>
+          <option value="Done">Done</option>
+        </select>
+
+        <select
+          id="priority-filter"
+          class="general-input priority-filter"
+          name="priority"
+        >
+          <option value="All">All</option>
+          <option value="High">High</option>
+          <option value="Normal">Normal</option>
+          <option value="Low">Low</option>
+        </select>
+
+        <button id="create-task" type="button" class="button general-input create-button">
+          Create
+        </button>
+        <!-- End filter-form -->
+      </form>
+
+      <section id="task-list" class="task-list"></section>
+
+      <aside id="create-window" class="create-task">
+        <form id="create-form" class="task-content">
+          <label for="title-input">Title:</label>
+          <input
+            id="title-input"
+            type="text"
+            class="general-input task-content__input task-content__title"
+            placeholder="Title"
+            required
+          />
+
+          <label for="description-input">Description:</label>
+          <textarea
+            id="description-input"
+            class="general-input task-content__input task-content__description"
+            placeholder="Description"
+            required
+          ></textarea>
+
+          <label for="priority-input">Priority:</label>
+          <select
+            id="priority-input"
+            class="general-input task-content__input task-content__priority"
+            name="priority"
+          >
+            <option value="high">High</option>
+            <option value="normal" selected>Normal</option>
+            <option value="low">Low</option>
+          </select>
+
+          <div class="task-content__buttons">
+            <button id="cancel-button" class="general-input button cancel-button">
+              Cancel
+            </button>
+            <button id="save-button" class="general-input button save-button">
+              Save
+            </button>
+          </div>
+        </form>
+      </aside>
+
+      <!-- End wrapper -->
+    </section>
+
+    <footer class="footer"></footer>
+  </body>
+</html>

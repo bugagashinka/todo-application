@@ -1,0 +1,62 @@
+/* === Task-item menu === */
+.task-menu__button {
+  width: 2.2em;
+  padding: 0.5em;
+  border: 2px solid #666;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.task-footer__menu {
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+
+    .task-menu__content {
+      display: block;
+    }
+
+    .task-menu__button {
+      background: #ccc;
+    }
+  }
+}
+
+.task-menu__content {
+  display: none;
+  position: absolute;
+  right: 1px;
+  width: 100px;
+  background-color: #f9f9f9;
+  border: 1px solid #000;
+  border-bottom: none;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  li {
+    cursor: pointer;
+    padding: 5px;
+    border-bottom: 1px solid;
+
+    &:hover {
+      background: #fff;
+      font-weight: 600;
+      transition: font-weight 0.1s ease-out;
+    }
+  }
+}
+
+/* .task-footer__menu:hover {
+  .task-menu__button:not(:disabled) + .task-menu__content {
+    display: block;
+  }
+*/

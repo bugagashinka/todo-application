@@ -1,0 +1,57 @@
+/* === Task-item === */
+.task {
+  position: relative;
+  max-width: 250px;
+  flex: 0 1 250px;
+  margin-bottom: 2em;
+  padding: 20px;
+  border: solid #000;
+  border-width: 2px 1px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px 1px #4b494966;
+
+  @media screen and (max-width: $break-small) {
+    flex-basis: 100%;
+    max-width: 90%;
+    margin: 16px;
+  }
+}
+
+.task_done {
+  background-color: #eaeaea;
+
+  .task-menu__button {
+    background-color: #ccc;
+  }
+}
+
+.task-header__status {
+  display: block;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 15px;
+  height: 15px;
+
+  &:not(:checked) {
+    display: none;
+  }
+}
+
+.task-header__title {
+  margin-top: 0;
+}
+
+.task-footer {
+  display: flex;
+  margin-top: 2em;
+  justify-content: space-between;
+}
+
+.task-footer__priority {
+  width: 4.5em;
+  padding: 0.5em;
+  border: 2px dashed;
+  border-radius: 10px;
+  text-align: center;
+}

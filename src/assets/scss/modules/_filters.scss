@@ -1,0 +1,41 @@
+/* === Filters === */
+
+.filter-form {
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  margin-bottom: 2em;
+  background-color: #555a;
+  padding: 20px;
+  z-index: 2;
+
+  &.open {
+    visibility: visible;
+  }
+
+  @media screen and (max-width: $break-small) {
+    width: 100%;
+    flex-direction: column;
+    position: fixed;
+    bottom: 22px;
+    visibility: hidden;
+  }
+
+  @media screen and (min-width: $break-small + 1) {
+    top: 0;
+  }
+
+  .general-input {
+    flex-grow: 1;
+    margin: 1em;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    @media screen and (max-width: $break-small) {
+      margin: 5px 16px;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.filter-menu {
+  display: none;
+  float: right;
+  cursor: pointer;
+
+  @media screen and (max-width: $break-small) {
+    display: block;
+  }
+}
+
+.menu-bar1,
+.menu-bar2,
+.menu-bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.open {
+  .menu-bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  .menu-bar2 {
+    opacity: 0;
+  }
+
+  .menu-bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+}
