@@ -3,9 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bugagashinka/todo-application.git"
+  },
   "scripts": {
-    "build": "NODE_ENV=production webpack",
+    "build": "cross-env NODE_ENV=production webpack",
     "start": "webpack-dev-server --open",
+    "prepublish": "rm -rf node_modules/gh-pages/.cache && npm run build",
     "publish": "gh-pages -d dist"
   },
   "keywords": [],
@@ -20,6 +26,7 @@
     "@babel/preset-env": "^7.6.3",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^6.0.3",
     "css-loader": "^3.2.0",
     "eslint": "^6.5.1",
     "eslint-config-airbnb-base": "^14.0.0",
