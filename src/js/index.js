@@ -30,7 +30,7 @@ const createTaskList = (taskProtoList) => {
 };
 
 const editTask = (formData, currentTaskElement) => {
-  const taskProtoUnderEdit = todoMap.get(currentTaskElement).date;
+  const taskProtoUnderEdit = todoMap.get(currentTaskElement);
   const newTask = new Task({ ...taskProtoUnderEdit, ...formData }, taskMenuHandlers);
   newTask.proto.date = taskProtoUnderEdit.date;
   todoMap.delete(currentTaskElement);
