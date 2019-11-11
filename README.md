@@ -1,4 +1,4 @@
-TODO list application
+# TODO list application
 
 [DEMO](https://bugagashinka.github.io/todo-application)
 
